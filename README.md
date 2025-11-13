@@ -14,7 +14,7 @@ Clone the repository and install all project dependencies:
 
 ```sh
 git clone https://github.com/rensebastien/jsonValidator.git
-cd json-validator-webpack
+cd jsonValidator
 # Install dependencies (from package.json)
 npm install
 ```
