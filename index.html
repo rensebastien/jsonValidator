@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <h1>JSON Schema Validator</h1>
+    <p>Uses <strong>Webpack</strong> for bundling and <strong>Ajv</strong> for validation.</p>
+
+    <div>
+      <div>
+        <h2>Schema</h2>
+        <p><em>(Enter a valid JSON Schema)</em></p>
+        <textarea id="schema-input" rows="20" cols="60">{
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "age": { "type": "integer", "minimum": 0 },
+    "email": { "type": "string", "format": "email" }
+  },
+  "required": ["name", "age"]
+}</textarea>
+      </div>
+
+      <div>
+        <h2>JSON Data</h2>
+        <p><em>(Enter the JSON data to validate)</em></p>
+        <textarea id="json-input" rows="20" cols="60">{
+  "name": "John Doe",
+  "age": 30
+}</textarea>
+      </div>
+    </div>
+
+    <button id="validate-btn">Validate</button>
+    <div id="result"></div>
+  </body>
+</html>

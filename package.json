@@ -1,0 +1,28 @@
+{
+  "name": "json-validator-webpack",
+  "version": "1.0.0",
+  "description": "A simple JSON validator project built with Webpack.",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified (TODO for Lecture 5)\" && exit 1",
+    "start": "webpack serve --open --mode=development",
+    "build": "webpack --mode=production"
+  },
+  "keywords": [
+    "webpack",
+    "json",
+    "validator",
+    "ajv"
+  ],
+  "author": "Ren Sébastien",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^8.12.0"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
