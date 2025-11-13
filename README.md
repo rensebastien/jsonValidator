@@ -13,6 +13,8 @@ It provides a UI to validate a JSON data object against a JSON schema, reporting
 Clone the repository and install all project dependencies:
 
 ```sh
+git clone https://github.com/rensebastien/jsonValidator.git
+cd json-validator-webpack
 # Install dependencies (from package.json)
 npm install
 ```
