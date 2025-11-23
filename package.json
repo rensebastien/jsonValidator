@@ -1,0 +1,45 @@
+{
+  "name": "json-validator-webpack",
+  "version": "1.0.0",
+  "description": "A simple JSON validator project built with Webpack.",
+  "private": true,
+  "scripts": {
+    "start": "webpack serve --open --mode=development",
+    "build": "webpack --mode=production",
+    "lint": "eslint src/**/*.js",
+    "test": "jest",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "webpack",
+    "json",
+    "validator",
+    "ajv"
+  ],
+  "author": "Ren Sébastien",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^8.12.0",
+    "loglevel": "^1.9.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "@eslint/js": "^9.39.1",
+    "babel-jest": "^30.2.0",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "html-webpack-plugin": "^5.5.3",
+    "husky": "^9.1.7",
+    "jest": "^30.2.0",
+    "lint-staged": "^16.2.7",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "eslint --fix"
+    ]
+  }
+}
