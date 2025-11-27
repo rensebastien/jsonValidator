@@ -1,19 +1,21 @@
 import { validateJson } from './validator.js';
 import log from './logger.js';
 
-// ... (code de récupération des éléments DOM identique) ...
+const schemaInput = document.getElementById('schema-input');
+const jsonInput = document.getElementById('json-input');
+const resultDiv = document.getElementById('result');
+
 const validateBtn = document.getElementById('validate-btn');
-// ...
+
 
 validateBtn.addEventListener('click', () => {
-  log.info("User initiated validation sequence"); // INFO: Action utilisateur
+  log.info("User initiated validation sequence"); 
 
   let schema, data;
 
   try {
     schema = JSON.parse(schemaInput.value);
   } catch (e) {
-    // ERROR: L'utilisateur a entré du JSON malformé
     log.error("Parsing Error - Schema is not valid JSON", e);
     setResult(false, 'Schema is not valid JSON. ' + e.message);
     return;

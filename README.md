@@ -1,48 +1,52 @@
-# JSON Validator (Webpack Project)
+# JSON Validator
 
-This project is a simple JSON validator web application created to demonstrate modern build tool usage with Webpack and npm.
-It provides a UI to validate a JSON data object against a JSON schema, reporting success or failure.
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![License](https://img.shields.io/badge/license-ISC-blue)
+![Version](https://img.shields.io/badge/version-1.0.0-orange)
 
-## Build and Setup
-### Prerequisites
+**JSON Validator** is a robust and modern web application designed to validate JSON data against JSON Schemas in real-time. Built with a focus on developer experience, it leverages **Webpack** for bundling, **Ajv** for high-performance validation, and a suite of quality assurance tools to ensure code reliability.
 
-* [Node.js](https://nodejs.org/) (which includes npm)
+## Description
 
-### 1. Installation
+This project provides a clean, dual-pane user interface where developers can input a JSON Schema on one side and JSON Data on the other. The application instantly validates the data, providing precise feedback on errors or success. It serves as both a practical tool for schema testing and a demonstration of a modern JavaScript build pipeline.
 
-Clone the repository and install all project dependencies:
+**Key Features:**
+* **Real-time Validation:** Instant feedback using the powerful Ajv library.
+* **Detailed Error Reporting:** Highlights exactly which path and rule caused a validation failure.
+* **Modern Build System:** Fully automated with Webpack 5.
+* **Developer Tooling:** Integrated logging, static analysis, and unit testing.
 
+## Visuals
 
-```sh
-git clone [your-repo-link]
-cd jsonValidator
-# Install dependencies (from package.json)
-npm install
-```
+![alt text](image.png)
 
----
+## Installation
 
-## Usage
+Follow these steps to get a development environment running:
 
-There are two main scripts to run the project.
+**Prerequisites:**
+* [Node.js](https://nodejs.org/) (v14 or higher recommended)
+* npm (included with Node.js)
 
-### 1. Development (Recommended)
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/rensebastien/jsonValidator.git
+    cd jsonValidator
+    ```
 
-This command starts a live development server. It will automatically build the project, open it in your browser, and watch your source files for changes, reloading the browser as you code.
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
 
-```sh
+##  Usage
+
+### Development
+Start the local development server.
+```bash
 npm start
 ```
 
-This will typically open the app at `http://localhost:8080`.
 
-### 2. Production Build
-
-This command builds and packages the application for production. It optimizes and minifies the code, and all output files are placed in the `/dist` folder.
-
-```sh
-npm run build
-```
-
-You can then view the built project by opening the `dist/index.html` file directly in your browser.
-
+##  License
+This project is licensed under the ISC License.

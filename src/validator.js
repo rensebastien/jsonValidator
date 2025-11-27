@@ -1,3 +1,7 @@
+/**
+ * Core validation module using Ajv.
+ * @module validator
+ */
 import Ajv from 'ajv';
 import addFormats from 'ajv-formats';
 import log from './logger.js'; // Import du logger

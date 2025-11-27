@@ -1,8 +1,13 @@
 import log from 'loglevel';
 
-// On définit le niveau par défaut. 
-// En dev, on veut tout voir (TRACE/DEBUG). 
-// En prod, on pourrait le monter à WARN ou ERROR.
+/**
+ * Application logger configuration.
+ * Uses 'loglevel' to manage log levels (DEBUG, INFO, WARN, ERROR).
+ * @module logger
+ */
+
+
+// Set default level to DEBUG for development
 log.setLevel(log.levels.DEBUG);
 
 export default log;
