@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  # Container 1 : L'Application Principale
+  validator-app:
+    build: .
+    container_name: json-validator-app
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./src:/app/src # Hot-reload: les modifs locales se voient dans le container
+    command: npm start
+    environment:
+      - NODE_ENV=development
+
+  # Container 2 : Serveur de Documentation
+  validator-docs:
+    build: .
+    container_name: json-validator-docs
+    ports:
+      - "8081:8081"
+    # On utilise npx http-server pour servir le dossier docs généré
+    command: npx http-server ./docs -p 8081

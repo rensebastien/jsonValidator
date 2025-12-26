@@ -4,7 +4,7 @@
   "description": "A simple JSON validator project built with Webpack.",
   "private": true,
   "scripts": {
-    "start": "webpack serve --open --mode=development",
+    "start": "webpack serve --host 0.0.0.0 --mode=development",
     "build": "webpack --mode=production",
     "lint": "eslint src/**/*.js",
     "test": "jest",
