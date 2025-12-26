@@ -30,7 +30,6 @@ validateBtn.addEventListener('click', () => {
   }
 
   const { valid, errors } = validateJson(schema, data);
-  console.log(errors);
 
   if (valid) {
     setResult(true, 'Validation Successful!');
